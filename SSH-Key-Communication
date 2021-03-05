@@ -1,0 +1,17 @@
+SSH Key communication
+
+S1(System 1) wants to connect to S2(System 2) via ssh key
+
+Step:1 Run the below command on S1, hit enter, provide filename, passphrase(optional). It will generate keypair (filename, filename.pub)
+$ssh-keygen -t rsa
+
+Step:2 Copy public key which in in your local path of S1 to remote S2
+$ssh-copy-id -i filename.pub username@S2-IPAddress
+	for ex: $ssh-copy-id -i filename.pub appusr@10.1.4.2
+This will prompt for appusr password
+
+Step:3 Login to S2 with the new key, here you need you need give the secret key filename, notice I am excluding .pub in the filename
+$ssh -i filename appusr@10.1.4.2
+
+This will prompt you for passphrase if you have provided, if not it will login and take you to S2 console.
+
