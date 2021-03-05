@@ -1,0 +1,25 @@
+Useful Linux commands
+
+1. Find java home in linux
+which java
+
+ --Keytool
+2. View contents of a .cer file
+keytool -printcert -file File.cer
+
+3. List all certificates in keystore
+keytool --list-keys -keystore keystore.jks
+
+4. Convert p7b to .cer file
+openssl pkcs7 -print_certs -in file.p7b -out new-file.cer
+
+5. Create a file with contens
+	* echo "your content" > file.txt
+	* touch file.txt
+	* printf 'your content' > file.txt
+
+6. Taking heap dump and thread dump
+Heap Dump = jmap -dump:format=b,file=file.bin <pid>
+Thread Dump = jstack -1 <pid> > <file-path>
+
+7. find . -name "searchfilename"
