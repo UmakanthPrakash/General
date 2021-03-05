@@ -1,0 +1,29 @@
+RegEx
+
+I use regex101 for all my regex validations, I feel it has a clear UI where we can test our Regex and also give a short description on the wild characters in our regex
+
+1. Match all the words that starts with abc or def
+(^[abc]{3}(.*))|(^[def]{3}(.*))
+	Desc of command
+	^ indicates starting of the string
+	[] encloses the text in context followed by length of the text
+	| indicates or since we are looking for either of the terms
+
+2. Similar to above but negation, we want match all except starting with abc or def
+^(?!(^[abc]{3}(.*))|(^[def]{3}(.*))).*
+	Desc: ?! is the key here, this is for negation
+
+3. Grouping in regex should be done with ()
+
+4. (mytext)(.*$)
+	Desc: This expression matches all the characters starting with mytext for instance mytext_asdf_qwe.txt
+
+5. [^\.].*(\.PDF)|.*(\.pdf)|.*(\.tar)+(\.gz)*
+	Desc: it will match all file with following extensions .PDF or .pdf or .tar or .tar.gz
+			thats the reason + is used with tar and gz
+
+6. ^((?!ABC).)*$
+	Desc: This will match all the words that does not start with ABC
+
+7. ^((?!ABC).).*(\.tar)+(\.gz)*
+	Desc: Matches all the files which are not starting with ABC<othercharacters>.tar and ABC<othercharacters>.tar.gz
