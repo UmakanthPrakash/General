@@ -1,7 +1,8 @@
 Useful Linux commands
 
 1. Find java home in linux
-which java
+$which java
+$whereis java
 
  --Keytool
 2. View contents of a .cer file
@@ -23,3 +24,7 @@ Heap Dump = jmap -dump:format=b,file=file.bin <pid>
 Thread Dump = jstack -1 <pid> > <file-path>
 
 7. find . -name "searchfilename"
+
+8. If you want to run the java application with a different truststore
+$java -Djavax.net.ssl.trustStore=<VALUEReferBelow>  -jar URJARNAME.jar
+VALUEReferBelow can be a custom cacerts file or it can be the path to your truststore.jks file as well, both will work fine
