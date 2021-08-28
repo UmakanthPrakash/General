@@ -32,3 +32,17 @@ innodb_file_format=Barracuda
 innodb_file_per_table=1
 
 save and exit, restart mariadb instance
+
+OR
+
+another way is to 
+Change all the Varchar() rows size to 256, you can use the below regex
+(varchar)\((\d){1,5}\)
+
+and execute below commands 
+SET GLOBAL innodb_default_row_format='dynamic';
+SET SESSION innodb_strict_mode=ON;
+
+then run the create table scripts
+
+-------
