@@ -1,0 +1,34 @@
+MariaDB
+
+installing mariadb
+$ brew install mariadb
+-----
+
+Launching Mariadb
+$ mysql.server start
+-----
+
+Running a sql file
+$ source sqlfile.sql
+-----
+
+Changing the root password, for this we need to exit the mariadb and execute the below command in normal mac terminal
+$ sudo mysqladmin -u root -p password root
+-----
+
+ERROR - When you encounter the below error the possible solutions are to increase the innodb page size
+ERROR 1118 (42000) at line 2632 in file: 'sqlfile.sql': Row size too large (> 8126). Changing some columns to TEXT or BLOB may help. In current row format, BLOB prefix of 0 bytes is stored inline.
+Query OK, 0 rows affected (0.000 sec)
+
+To locate the my.conf file - execute the below command
+$ mysqld --help --verbose
+
+Once the config file is run the below command and edit the file 
+$ sudo vi /etc/mysql/my.cnf
+
+with below content
+innodb_page_size=32K
+innodb_file_format=Barracuda
+innodb_file_per_table=1
+
+save and exit, restart mariadb instance
