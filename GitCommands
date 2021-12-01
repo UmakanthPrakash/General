@@ -1,0 +1,10 @@
+1. Committing already existing project to git
+      git init
+      git add .
+      git commit -m "Commit Message"
+      git remote add origin <url>     = This url can be either https or ssh url, preferable ssh url
+      
+      git push -u origin master       = in case you want to commit directly to master
+      OR
+      git checkout -b development     = create a new development branch
+      git push -u origin development
