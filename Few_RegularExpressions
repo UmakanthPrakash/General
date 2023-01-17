@@ -27,3 +27,6 @@ I use regex101 for all my regex validations, I feel it has a clear UI where we c
 
 7. ^((?!ABC).).*(\.tar)+(\.gz)*
 	Desc: Matches all the files which are not starting with ABC<othercharacters>.tar and ABC<othercharacters>.tar.gz
+
+8. ^(?:[\t ]*(?:\r?\n|\r))+
+	Desc: Matches the emtpy lines in a text file, with this regex it easy to remove all the blank lines
