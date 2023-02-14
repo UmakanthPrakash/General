@@ -8,3 +8,7 @@
       OR
       git checkout -b development     = create a new development branch
       git push -u origin development
+
+
+
+Good Reference doc - https://about.gitlab.com/images/press/git-cheat-sheet.pdf
