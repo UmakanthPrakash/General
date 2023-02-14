@@ -1,0 +1,4 @@
+In No particular order
+
+Issue : When using JPA entities which are linked by parent child relationship, the Json serialization enters into a infinite recurssion
+https://stackoverflow.com/questions/71991102/spring-data-jpa-findall-does-not-return-relations-data/71993222#71993222
