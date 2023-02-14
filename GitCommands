@@ -12,3 +12,24 @@
 
 
 Good Reference doc - https://about.gitlab.com/images/press/git-cheat-sheet.pdf
+
+
+2. Use case - remove everything from a branch and re commit with fresh files
+      probably best to do clean up and delete it in a different directory
+      git clone <url>
+      git rm -rf *
+            check if all files are deleted, if there are hidden files like .gitignore or .gradle it will still be present, delete them as well
+      git commit -m "<MESSAGE>"
+      git push
+      ------
+      Since you will be committing on top of the remote branch you can rebase 
+      In you directory or your new project location which has the new file do the steps below
+      git init
+      git add .
+      git commit -m "<NEW FILES ADDED or YOUR MESSAGE>"
+      git remote add origin <url>
+      git config pull.rebase true
+      git stash
+      git pull <url>
+      git stash pop
+      git push -u origin master
