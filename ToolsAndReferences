@@ -1,3 +1,14 @@
+Best way that I found to install nodejs on linux
+  If nodejs is already installed then it can be removed as show here  
+    sudo apt-get remove nodejs
+    sudo apt-get purge nodejs
+    sudo apt-get autoremove
+  Download whichever LTS version is currently available from node
+  sudo tar --strip-components 1 -xvf node-v18.14.2-linux-x64.tar.xz --directory /usr/local/
+
+sudo tar --strip-components 1 -xvf node-v18.14.2-linux-x64.tar.xz --directory /usr/local/
+
+
 Spring Transaction Management
 https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth
 
