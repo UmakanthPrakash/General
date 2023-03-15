@@ -30,3 +30,10 @@ I use regex101 for all my regex validations, I feel it has a clear UI where we c
 
 8. ^(?:[\t ]*(?:\r?\n|\r))+
 	Desc: Matches the emtpy lines in a text file, with this regex it easy to remove all the blank lines
+	
+9. Select an entire line if there is matching pattern in the line 
+	for ex if the line is   
+	"id": "218c4596-c62c-480f-a679-2f341056e42e",
+	and I want to match the UUID then my regex could be [a-z0-9]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12} but matches only the UUID and not the whole line.
+	To match the whole line we can use alterations and below is the example.
+	^.*\b[a-z0-9]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}\b.*$
