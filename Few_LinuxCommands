@@ -28,3 +28,9 @@ Thread Dump = jstack -1 <pid> > <file-path>
 8. If you want to run the java application with a different truststore
 $java -Djavax.net.ssl.trustStore=<VALUEReferBelow>  -jar URJARNAME.jar
 VALUEReferBelow can be a custom cacerts file or it can be the path to your truststore.jks file as well, both will work fine
+
+
+8. Generating GIF's in Mac
+brew install ffmpeg
+brew install gifsicle
+ffmpeg -i LocationAPIDemoRun.mov -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
