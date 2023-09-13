@@ -33,3 +33,11 @@ Good Reference doc - https://about.gitlab.com/images/press/git-cheat-sheet.pdf
       git pull <url>
       git stash pop
       git push -u origin master
+
+
+3. Revert Local changes which are committed(git commit) but not yet pushed (git push)
+      git reset --hard HEAD~1
+
+4. Revert the changes from git add command
+      when you have done a git add file1 file2 file3 but you want to remove them 
+      git reset HEAD file1
